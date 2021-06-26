@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ZhukovaZakazApp</string>
+    <string name="auth_conditions">Авторизуясь, я соглашаюсь с <u>условиями использования</u></string>
 </resources>
