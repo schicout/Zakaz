@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">zakaz</string>
+    <string name="auth_conditions">Авторизуясь, я соглашаюсь с <u>условиями использования</u></string>
+</resources>
