@@ -56,6 +56,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvLogoSecondPart" />
 
+        <TextView
+            android:id="@+id/tvPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/tvBasket"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBasket"
+            app:layout_constraintEnd_toEndOf="parent" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/clFirst"
             android:layout_width="match_parent"
