@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         btnStarter.setOnClickListener {
             val authPhoneNumb = findViewById<EditText>(R.id.etAuthPhoneNumb)
             val intent = Intent(this, KorzinaZakaza::class.java)
-            intent.putExtra("phone", String.format("Phone Number is %s",authPhoneNumb.text.toString()))
+            intent.putExtra("phone", String.format("Номер телефона %s",authPhoneNumb.text.toString()))
             startActivity(intent)
         }
     }
