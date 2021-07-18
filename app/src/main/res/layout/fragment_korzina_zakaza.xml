@@ -61,13 +61,12 @@
             android:id="@+id/tvPhoneNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@+id/tvBasket"
-            app:layout_constraintBottom_toBottomOf="@+id/tvBasket"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvBasket"
+            app:layout_constraintTop_toBottomOf="@+id/tvBasket"
+            android:layout_marginTop="6dp"
+            android:textSize="12sp"
             android:textColor="@color/black"
-            android:hint="+8 800 2000 600"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:hint="+8 800 2000 600" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/clFirst"

@@ -1,26 +1,30 @@
 package com.zhukova.zhukovazakazapp
 
-import android.content.Intent
+import android.app.PendingIntent.getActivity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.telephony.PhoneNumberFormattingTextWatcher
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ScrollView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MainNavigation {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_authorization);
-
-        val btnStarter = findViewById<Button>(R.id.btnStarter)
-        btnStarter.setOnClickListener {
-            val authPhoneNumb = findViewById<EditText>(R.id.etAuthPhoneNumb)
-            val intent = Intent(this, KorzinaZakaza::class.java)
-            intent.putExtra("phone", String.format("Номер телефона %s",authPhoneNumb.text.toString()))
-            startActivity(intent)
+        setContentView(R.layout.activity_main)
+        openAuthorizationFragment()
         }
+
+    override fun openKorzinaZakazaFragment(phoneNumber: String) {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.flRoot, KorzinaZakazaFragment.newInstance(phoneNumber = phoneNumber))
+            .addToBackStack("KorzinaZakazaFragment")
+            .commit()
     }
 
-}
+     override fun openAuthorizationFragment() {
+        supportFragmentManager
+            .beginTransaction()
+            .add(R.id.flRoot, authorizationFragment())
+            .addToBackStack("authorizationFragment")
+            .commit()
+        }
+    }
