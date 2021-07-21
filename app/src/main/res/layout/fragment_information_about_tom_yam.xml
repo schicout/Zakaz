@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InformationAboutTomYamFragment">
+
+    <ImageView
+        android:id="@+id/ivTomYam320x292"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tom_yam_320x292"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="34dp"/>
+
+    <ImageView
+        android:id="@+id/ivGreenHeard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/green_heard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="28dp"/>
+
+    <TextView
+        android:id="@+id/tvMoreInformationTomYamName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Том Ям суп с морепродуктами \nмидии и креветки"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTomYam320x292"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="17dp"/>
+
+    <TextView
+        android:id="@+id/tvWeightPerPiece"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 шт / 300 г"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/tvMoreInformationTomYamName"
+        app:layout_constraintTop_toBottomOf="@+id/tvMoreInformationTomYamName"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/tvCalorieEnergy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="312 ккал"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/tvWeightPerPiece"
+        app:layout_constraintTop_toBottomOf="@+id/tvMoreInformationTomYamName"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="17dp"/>
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="322dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="71dp"
+        android:text="Бульон из пряного говяжьего мясного супа с \nкокосовым молоком, грибами, томатами, \nзеленью. Подается с добавками на выбор, отварным белым рисом или рисовой вермишелью на выбор"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMoreInformationTomYamName"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/tvOrderPrice"
+        android:layout_width="135dp"
+        android:layout_height="48dp"
+        android:background="@drawable/button_with_shadow"
+        android:gravity="center"
+        android:text="235 ₽"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="38dp"/>
+
+    <FrameLayout
+        android:layout_width="135dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/grey_border"
+        app:layout_constraintEnd_toStartOf="@+id/tvOrderPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+        android:layout_marginEnd="24dp">
+
+        <TextView
+            android:id="@+id/tvAddServing"
+            android:layout_width="11dp"
+            android:layout_height="20dp"
+            android:text="+"
+            android:textSize="18sp"
+            android:layout_gravity="right"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="30dp"
+            tools:layout_editor_absoluteX="52dp"
+            tools:layout_editor_absoluteY="653dp" />
+
+        <TextView
+            android:id="@+id/tvNumberOfServings"
+            android:layout_width="11dp"
+            android:layout_height="20dp"
+            android:text="1"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            tools:layout_editor_absoluteX="52dp"
+            tools:layout_editor_absoluteY="653dp" />
+
+        <TextView
+            android:id="@+id/tvRemoveServing"
+            android:layout_width="5dp"
+            android:layout_height="20dp"
+            android:text="-"
+            android:textSize="18sp"
+            android:layout_gravity="left"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="14dp"/>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

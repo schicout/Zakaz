@@ -4,19 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 
-class KorzinaZakazaFragment : Fragment() {
+class OrderListFragment : Fragment() {
 
     companion object{
-        const val PHONE_NUMBER_KEY = "PHONE_NUMBER"
+        private const val PHONE_NUMBER_KEY = "PHONE_NUMBER"
 
-        fun newInstance (phoneNumber: String) : KorzinaZakazaFragment {
-            return KorzinaZakazaFragment().apply {
+        fun newInstance (phoneNumber: String) : OrderListFragment {
+            return OrderListFragment().apply {
                 arguments = bundleOf(
                     PHONE_NUMBER_KEY to phoneNumber
                 )
@@ -31,7 +29,7 @@ class KorzinaZakazaFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_korzina_zakaza, container,false)
+        return inflater.inflate(R.layout.fragment_order_list, container,false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

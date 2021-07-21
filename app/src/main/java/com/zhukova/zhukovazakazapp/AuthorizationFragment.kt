@@ -12,7 +12,7 @@ import androidx.core.os.bundleOf
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 
-class authorizationFragment : Fragment() {
+class AuthorizationFragment : Fragment() {
     companion object{
         const val COUNT_OF_NUMBERS_IN_RUS_PHONE = 10
     }
@@ -39,7 +39,7 @@ class authorizationFragment : Fragment() {
 
     private fun configureStartBtn(){
          btnStarter.setOnClickListener {
-             (activity as MainNavigation).openKorzinaZakazaFragment(etAuthPhone.text.toString())
+             (activity as? MainNavigation)?.openOrderListFragment(etAuthPhone.text.toString())
         }
     }
 

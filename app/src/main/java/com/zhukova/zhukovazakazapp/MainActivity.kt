@@ -1,30 +1,45 @@
 package com.zhukova.zhukovazakazapp
 
-import android.app.PendingIntent.getActivity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+
 
 class MainActivity : AppCompatActivity(), MainNavigation {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         openAuthorizationFragment()
+
+        val btnOpenInformationAboutTomYamFragment = findViewById<ImageView>(R.id.ivTomYamBtn)
+
+        btnOpenInformationAboutTomYamFragment.setOnClickListener {
+            openInformationAboutTomYamFragment()
         }
 
-    override fun openKorzinaZakazaFragment(phoneNumber: String) {
+        }
+
+    override fun openAuthorizationFragment() {
         supportFragmentManager
             .beginTransaction()
-            .replace(R.id.flRoot, KorzinaZakazaFragment.newInstance(phoneNumber = phoneNumber))
-            .addToBackStack("KorzinaZakazaFragment")
+            .add(R.id.flRoot, AuthorizationFragment())
             .commit()
     }
 
-     override fun openAuthorizationFragment() {
+    override fun openOrderListFragment(phoneNumber: String) {
         supportFragmentManager
             .beginTransaction()
-            .add(R.id.flRoot, authorizationFragment())
-            .addToBackStack("authorizationFragment")
+            .replace(R.id.flRoot, OrderListFragment.newInstance(phoneNumber = phoneNumber))
+            .addToBackStack("OrderListFragment")
             .commit()
-        }
     }
+    fun openInformationAboutTomYamFragment(){
+        InformationAboutTomYamFragment().show(supportFragmentManager, "InformationAboutTomYamFragment")
+    }
+
+
+}

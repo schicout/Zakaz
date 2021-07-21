@@ -1,6 +1,6 @@
 package com.zhukova.zhukovazakazapp
 
 interface MainNavigation {
-    fun openKorzinaZakazaFragment(phoneNumber: String)
+    fun openOrderListFragment(phoneNumber: String)
     fun openAuthorizationFragment()
 }
