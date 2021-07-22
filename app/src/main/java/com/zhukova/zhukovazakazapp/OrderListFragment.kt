@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
@@ -34,11 +35,18 @@ class OrderListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val btnOpenInformationAboutTomYamFragment = view.findViewById<ImageView>(R.id.ivTomYamBtn)
+
+        btnOpenInformationAboutTomYamFragment.setOnClickListener {
+            (activity as? MainNavigation)?.openInformationAboutTomYamFragment()
+        }
+
         phoneNumber = arguments?.getString(PHONE_NUMBER_KEY)
         val tvPhoneNumber = view.findViewById<TextView>(R.id.tvPhoneNumber)
         tvPhoneNumber.text = "Phone number : $phoneNumber"
 
         }
+
 
 
 

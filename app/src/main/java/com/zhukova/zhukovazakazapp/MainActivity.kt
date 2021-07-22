@@ -14,14 +14,7 @@ class MainActivity : AppCompatActivity(), MainNavigation {
         setContentView(R.layout.activity_main)
 
         openAuthorizationFragment()
-
-        val btnOpenInformationAboutTomYamFragment = findViewById<ImageView>(R.id.ivTomYamBtn)
-
-        btnOpenInformationAboutTomYamFragment.setOnClickListener {
-            openInformationAboutTomYamFragment()
-        }
-
-        }
+    }
 
     override fun openAuthorizationFragment() {
         supportFragmentManager
@@ -37,8 +30,12 @@ class MainActivity : AppCompatActivity(), MainNavigation {
             .addToBackStack("OrderListFragment")
             .commit()
     }
-    fun openInformationAboutTomYamFragment(){
-        InformationAboutTomYamFragment().show(supportFragmentManager, "InformationAboutTomYamFragment")
+
+    override fun openInformationAboutTomYamFragment() {
+        InformationAboutTomYamFragment().show(
+            supportFragmentManager,
+            "InformationAboutTomYamFragment"
+        )
     }
 
 
