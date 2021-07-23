@@ -1,10 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/flRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvLogoFirstPart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="online"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLogoSecondPart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="SWIFTBOOK"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvLogoFirstPart"
+        app:layout_constraintTop_toBottomOf="@+id/tvLogoFirstPart" />
+
+    <ImageView
+        android:id="@+id/ivCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape_circle"
+        app:layout_constraintStart_toEndOf="@id/tvLogoSecondPart"
+        app:layout_constraintTop_toTopOf="@id/tvLogoFirstPart" />
+
+    <ImageView
+        android:layout_width="19dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_busket"
+        app:layout_constraintBottom_toBottomOf="@id/tvLogoSecondPart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivCircle" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tbMainPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvLogoSecondPart"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpMainPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbMainPanel"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
