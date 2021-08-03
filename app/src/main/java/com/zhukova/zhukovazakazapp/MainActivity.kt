@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TableLayout
 import android.widget.TextView
+import android.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
@@ -16,6 +17,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
         val vpMainPager = findViewById<ViewPager2>(R.id.vpMainPager)
         vpMainPager.adapter = ViewPagerAdapter(this).apply {
             addFragment(AllDishesFragment())
@@ -45,6 +50,7 @@ class MainActivity : AppCompatActivity() {
         val tabPanelNames = listOf("Всё", "Фаст-фуд", "Десерты")
 
         //vpMainPager.isUserInputEnabled = false
+
         val tbMainPanel = findViewById<TabLayout>(R.id.tbMainPanel)
         TabLayoutMediator(tbMainPanel, vpMainPager) { tab, position ->
             tab.text = tabPanelNames[position]

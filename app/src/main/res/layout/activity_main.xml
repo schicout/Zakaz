@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <TextView
         android:id="@+id/tvLogoFirstPart"
         android:layout_width="wrap_content"
@@ -14,7 +20,7 @@
         android:layout_marginTop="24dp"
         android:text="online"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
 
     <TextView
         android:id="@+id/tvLogoSecondPart"
@@ -42,6 +48,8 @@
         app:layout_constraintBottom_toBottomOf="@id/tvLogoSecondPart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/ivCircle" />
+
+
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tbMainPanel"
