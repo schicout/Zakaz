@@ -5,7 +5,7 @@
         android:icon="@drawable/ic_spoon_knife"
         android:title="Меню" />
     <item
-        android:id="@+id/selected"
+        android:id="@+id/favoutites"
         android:icon="@drawable/ic_heard"
         android:title="Избранное" />
 </menu>

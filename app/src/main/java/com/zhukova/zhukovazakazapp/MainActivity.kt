@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
-        //val bnvMain = findViewById<ViewPager2>(R.id.bnvMain)
+        val bnvMain = findViewById<BottomNavigationView>(R.id.bnvMain)
 
         val vpMainPager = findViewById<ViewPager2>(R.id.vpMainPager)
 
@@ -36,6 +37,20 @@ class MainActivity : AppCompatActivity() {
             addFragment(DessertsFragment())
         }
 
+        bnvMain.setOnNavigationItemSelectedListener(object :
+            BottomNavigationView.OnNavigationItemSelectedListener {
+            override fun onNavigationItemSelected(item: MenuItem): Boolean {
+                when (item.itemId) {
+                    //R.id.favoutites -> {
+                        // vpMainPager.currentItem = 1
+                    //}
+                    R.id.menu -> {
+                        vpMainPager.currentItem = 0
+                    }
+                }
+                return true
+            }
+        })
 
         vpMainPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageScrollStateChanged(state: Int) {
@@ -71,15 +86,5 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.toolbar_menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
-    //bnvMain.setOnItemSelectedListener ( object : NavigationView.OnItemSelectedListener {
-      //  override fun onNavigationItemSelected(item: MenuItem): Boolean {
-      //      when(item.itemId){
-      //          R.id.selected->{
-
-      //          }
-      //      }
-      //      return true
-     //   }
-    //})
 
 }

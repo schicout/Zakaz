@@ -50,8 +50,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/ivCircle" />
 
-
-
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tbMainPanel"
         android:layout_width="match_parent"
