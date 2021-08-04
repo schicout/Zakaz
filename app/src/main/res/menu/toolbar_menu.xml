@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/squareSymbol"
+        android:icon="@drawable/shape_square"
+        android:title="first"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/circleSymbol"
+        android:icon="@drawable/shape_circle_grey"
+        android:title="second"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/triangleSymbol"
+        android:icon="@drawable/shape_triangle"
+        android:title="third"
+        app:showAsAction="ifRoom"/>
+</menu>

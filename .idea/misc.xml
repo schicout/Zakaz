@@ -3,10 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/dimanych/AndroidStudioProjects/ZhukovaZakazApp/app/src/main/res/drawable/ic_heard.xml" value="0.18958333333333333" />
+        <entry key="..\:/Users/dimanych/AndroidStudioProjects/ZhukovaZakazApp/app/src/main/res/drawable/ic_spoon_knife.xml" value="0.18958333333333333" />
         <entry key="..\:/Users/dimanych/AndroidStudioProjects/ZhukovaZakazApp/app/src/main/res/drawable/shape_circle.xml" value="0.2942708333333333" />
+        <entry key="..\:/Users/dimanych/AndroidStudioProjects/ZhukovaZakazApp/app/src/main/res/drawable/shape_circle_grey.xml" value="0.14166666666666666" />
         <entry key="..\:/Users/dimanych/AndroidStudioProjects/ZhukovaZakazApp/app/src/main/res/drawable/shape_square.xml" value="0.2942708333333333" />
-        <entry key="..\:/Users/dimanych/AndroidStudioProjects/ZhukovaZakazApp/app/src/main/res/drawable/shape_triangle.xml" value="0.2942708333333333" />
-        <entry key="..\:/Users/dimanych/AndroidStudioProjects/ZhukovaZakazApp/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/dimanych/AndroidStudioProjects/ZhukovaZakazApp/app/src/main/res/drawable/shape_triangle.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/dimanych/AndroidStudioProjects/ZhukovaZakazApp/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/dimanych/AndroidStudioProjects/ZhukovaZakazApp/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1734375" />
+        <entry key="..\:/Users/dimanych/AndroidStudioProjects/ZhukovaZakazApp/app/src/main/res/menu/toolbar_menu.xml" value="0.278125" />
       </map>
     </option>
   </component>
